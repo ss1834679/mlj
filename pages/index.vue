@@ -13,13 +13,16 @@
       <view class="good-item">123123</view>
       <view class="good-item">123123</view>
     </view>
+    <MyTabbar :active="1" />
   </view>
 </template>
 
 <script>
+import MyTabbar from "./MyTabbar";
 import { mapState } from "vuex";
 import { genTestUserSig } from "../utils/im/GenerateTestUserSig";
 export default {
+  components: { MyTabbar },
   data () {
     return {
       word: "",

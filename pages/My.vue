@@ -11,7 +11,7 @@
       <Qrcode class="qrcode" ref="qrcode" :text="qrcodeText" />
     </view>
     <view class="qrcode-msg">{{`向${unit.lang_patient}出示二维码，${unit.lang_patient}可自由选择量表进行测评，请医生及时查看测评报告。`}}</view>
-    <MyTabbar :active="3" />
+    <MyTabbar :active="2" />
   </view>
 </template>
 

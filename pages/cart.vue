@@ -11,14 +11,16 @@
       @changeNum="changeNum"
       :carts="carts"
     />
+    <MyTabbar :active="3" />
   </view>
 </template>
 
 <script>
+import MyTabbar from "./MyTabbar";
 import SideslipCar from "../components/sideslip-car.vue";
 
 export default {
-  components: { SideslipCar },
+  components: { MyTabbar,SideslipCar },
   data () {
     return {
       carts: [
@@ -32,7 +34,7 @@ export default {
           spec: [{ name: "尺寸", value: "M" }, { name: "颜色", value: "黑色" }],
           price: 19,
           number: 1,
-          stock: 193,
+          stock: 233,
           isTouchMove: false,
           selected: true,
         },
