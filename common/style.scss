@@ -1,0 +1,221 @@
+/* 页面整体样式设置 */
+.app {
+	background-color: #F8F8F8;
+	min-height: 100vh;
+}
+
+.flex {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.flex-1{
+  flex: 1;
+}
+.flex-v {
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.flex-align-center {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.flex-align-start {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.flex-align-end {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+.flex-pack-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.flex-pack-justify {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.flex-pack-around {
+  -webkit-box-pack: center;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: center;
+  justify-content: space-around;
+}
+.flex-pack-end {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.flex-pack-start {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.text-c{
+  text-align: center;
+}
+.text-l{
+  text-align: left;
+}
+.text-r{
+  text-align: right;
+}
+.border-5 {
+  border-radius: 5px;
+}
+.w90 {
+  width: 90px;
+}
+.w60{
+  width: 60px;
+}
+
+// 定义字体(rpx)单位，大于或等于20的都为rpx单位字体
+@for $i from 20 through 41 {
+	.font-#{$i} {
+		font-size: $i + rpx;
+	}
+}
+/* 边距 */
+@for $i from 10 to 16 {
+	.p-#{$i} {
+		padding: $i + px;
+	}
+}
+@for $i from 10 to 16 {
+	.m-#{$i} {
+		margin: $i + px;
+	}
+}
+@for $i from 5 to 11 {
+	.ml-#{$i} {
+		margin-left: $i + px;
+	}
+}
+@for $i from 10 to 16 {
+	.ptb-#{$i} {
+		padding-top: $i + px;
+		padding-bottom: $i + px;
+	}
+}
+@for $i from 10 to 16 {
+	.plr-#{$i} {
+		padding-left: $i + px;
+		padding-right: $i + px;
+	}
+}
+@for $i from 10 to 16 {
+	.mtb-#{$i} {
+		margin-top: $i + px;
+		margin-bottom: $i + px;
+	}
+}
+@for $i from 10 to 16 {
+	.mlr-#{$i} {
+		margin-left: $i + px;
+		margin-right: $i + px;
+	}
+}
+.fffcell{
+  background-color: #fff;
+  padding: 10px 16px;
+  position: relative;
+  &::after{
+    position: absolute;
+    box-sizing: border-box;
+    content: ' ';
+    pointer-events: none;
+    right: 16px;
+    bottom: 0;
+    left: 16px;
+    border-bottom: 1px solid #ebedf0;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+  }
+}
+.ptb-40 {
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.marginBSafe {
+  margin-bottom: calc(60px + env(safe-area-inset-bottom));
+}
+.marginASafe{
+  margin-bottom: env(safe-area-inset-bottom);
+}
+/** 省略 */
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.multi-ellipsis--l2 {
+  -webkit-line-clamp: 2;
+}
+.multi-ellipsis--l2,
+.multi-ellipsis--l3 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+.multi-ellipsis--l3 {
+  -webkit-line-clamp: 3;
+}
+.submit-bar{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  -webkit-user-select: none;
+  user-select: none;
+  z-index: 100;
+  background-color: #fff;
+  .sum-bar{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    padding: 0 32rpx;
+    height: 100rpx;
+    font-size: 28rpx;
+    background-color: #fff;
+    .sum-text{
+      flex: 1;
+      text-align: left;
+      .sum-text-price{
+        color: #ee0a24;
+      }
+    }
+    .sum-btn{
+      height: 80rpx;
+    }
+  }
+}
+.codeBtn{
+  .u-btn{
+    color: #2f4fb3 !important;
+    background-color: #e1e8ff !important;
+    border-radius: 10px;
+    border: none !important;
+    padding: 0 15px !important;
+    font-size: 14px !important;
+    line-height: 1.2;
+  }
+}
